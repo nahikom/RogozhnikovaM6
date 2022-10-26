@@ -1,321 +1,73 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head class="header">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<html lang="ru" style="background: url(files/18.jpg) repeat;">
+<head>
     <meta charset="utf-8"/>
-    <title>Пример сайта</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <title>Галерея</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="row bg-image">
     <header>
         <div>
             <img src="https://i.pinimg.com/564x/de/75/09/de75097680e870d2570ceb4137ca2ed9.jpg" alt="Логотип">
-             <h1>Страница Геншин</h1>
+            <h1>Галерея Genshin</h1>
         </div>
     </header>
-    
-    <nav class="navbar navbar-expand-lg">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav mr-4 ">
-            <li class="nav-item"><a class="nav-link" href="#forma">Форма</a></li>
-            <li class="nav-item"><a class="nav-link" href="#ssilki">Ссылки</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tabl">Таблица</a></li>
-        </ul>
+    <br>
+    <div class="responsive">
+        <div class="data"> 
+            <img src="files/1.jpg" alt="">
         </div>
-    </nav>
-    
-    <div class="back">
-    
-    <h2 id="ssilki">Список гиперссылок</h2>
-    <ol>
-        <li>
-            <a href="http://nahikom.github.io/RogozhnikovaM1/">Ссылка на главную страницу сайта</a>
-        </li>
-        <li>
-            <a href="https://nahikom.github.io/RogozhnikovaM1/">Ссылка на главную страницу сайта в протоколе https</a>
-        </li>
-        <li>
-            <a id="chap2"></a>
-            <a href="ftp://files/project1.html">Ссылка на файл на сервере FTP без авторизации</a>
-        </li>
-        <li>
-            <a href="ftp://user:pass123@files/project2.html">Ссылка на файл на сервере FTP с авторизацией</a>
-        </li>
-        <li>
-            <a href="files/project3.html#chap1">Ссылка на фрагмент страницы некоторого сайта</a>
-        </li>
-        <li>
-            <a href="#chap2">Ссылка на фрагмент текущей страницы</a>
-        </li>
-        <li>
-            <a href="http://nahikom.github.io/RogozhnikovaM/files/project2.html">Ссылка с двумя параметрами в URL</a>
-        </li>
-        <li>
-            <a>Ссылка без href</a>
-        </li>
-        <li>
-            <a href="#no_scroll">Ссылка с пустым href</a>
-        </li>
-        <li>
-            <a href="https://i.pinimg.com/originals/8e/f6/d7/8ef6d77014d9920860633fb826e16510.gif" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a>
-        </li>
-        <li>
-            <!--noindex--><a href="https://i.pinimg.com/564x/eb/b2/02/ebb202364ccb3bc93525ecf700251beb.jpg" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a><!--/noindex-->
-        </li>
-        <li>
-            <p>
-                <em>«Кругом листва, а <a href="https://genshin-impact.fandom.com/ru/wiki/Кадзуха" title="Контекстная ссылка">я</a> как раз знаю подходящую мелодию. Хочешь послушать?»</em>
-            </p>
-        </li>
-        <li><p>Ссылка-изображение</p>
-            <p class="image"><a href="https://genshin-impact.fandom.com/ru/wiki/Тигнари"><img src="https://resize.yandex.net/imgs_touch?key=a3425ace2932d82e9b4acf68df32f930&url=https%3A%2F%2Fwww.youloveit.ru%2Fuploads%2Fposts%2F2022-07%2F1658661668_youloveit_ru_genshin_impact_tignari19.jpg&width=759&height=1200&typemap=png%3Apng%3B*%3Ajpg&quality=60&use-cache-headers=yes&crop=no&enlarge=no" alt="Тигнари"></a></p>
-            
-        </li>
-        <li>
-            <span>Ссылки из прямоугольных и круглых областей картинки</span>
-            <p class="image"><img src="files/4.jpg" usemap="#figuri" alt="" ></p>
-            <map name="figuri">
-                <area shape="rect" coords="0,0,220,200" href="https://genshin-impact.fandom.com/ru/wiki/Хэйдзо" alt="Детектив">
-                <area shape="circle" coords="350,104,80" href="https://genshin-impact.fandom.com/ru/wiki/Венти" alt="Барбатос">
-                <area shape="rect" coords="520,0,720,200" href="https://genshin-impact.fandom.com/ru/wiki/Кадзуха" alt="Роин-самурай">
-                <area shape="circle" coords="830,104,80" href="https://genshin-impact.fandom.com/ru/wiki/Сяо" alt="Последний якса">
-            </map>
-        </li>
-        <li>
-            <a href="files/project3.html">Относительная на страницу в текущем каталоге</a>
-        </li>
-
-        <li>
-            <a href="index.html">Сокращенная на главную</a>
-        </li>
-        <li>
-            <a href="files/project1.html">Сокращенная ссылка на внутреннюю</a>
-        </li>
-    </ol>
-    </div>
-    
-    <div id="parent">
-    <div class="back; tubl">
-    <table id="tabl" class="back"><caption>Таблица персонажей</caption>
-        <tr class="main-str">
-            <th id="non-str"></th>
-            <th colspan="4">Мондштадт</th>
-            <th colspan="4">Ли Юэ</th>
-            <th colspan="2">Инадзума</th>
-            <th>Снежная (Россия)</th>
-        </tr>
-
-        <tr class="nechet">
-            <td class="gods-eye; main-str">Пиро</td>
-            <td>Дилюк</td>
-            <td>Кли</td>
-            <td>Беннет</td>
-            <td>Эмбер</td>
-
-            <td>Ху Тао</td>
-            <td>Синь Янь</td>
-            <td>Сян Лин</td>
-            <td>Янь Фэй</td>
-            
-            <td>Тома</td>
-            <td>Ёимия</td>
-            
-            <td id="britain" rowspan="6"><img src="https://c.tenor.com/TzswiZCeSsQAAAAd/childe-genshin.gif" alt="" width="264"><br>Злодей-британец</td>
-        </tr>
-        <tr class="chet">
-            <td class="gods-eye; main-str">Крио</td>
-            <td>Кэйа</td>
-            <td>Эола</td>
-            <td>Розария</td>
-            <td>Диона</td>
-
-            <td>Гань Юй</td>
-            <td>Шэнь Хэ</td>
-            <td>Ци Ци</td>
-            <td>Чун Юнь</td>
-
-            <td colspan="2">Аяка</td>
-
-        </tr>
-        <tr class="nechet">
-            <td class="gods-eye; main-str">Гидро</td>
-            <td colspan="2">Мона</td>
-            <td colspan="2">Барбара</td>
-
-            <td colspan="2">Син Цю</td>
-            <td colspan="2">Е Лань</td>
-
-            <td>Кокоми</td>
-            <td>Аято</td>
-
-        </tr>
-        <tr class="chet">
-            <td class="gods-eye; main-str">Электро</td>
-            <td>Лиза</td>
-            <td colspan="2">Фишль</td>
-            <td>Рэйзор</td>
-
-            <td>Кэ Цин</td>
-            <td>Бэй Доу</td>
-
-            <td>Райдэн</td>
-            <td>Яэ Мико</td>
-            <td>Сара</td>
-            <td>Синобу</td>
-
-        </tr>
-        <tr class="nechet">
-            <td class="gods-eye; main-str">Гео</td>
-            <td colspan="2">Альбедо</td>
-            <td colspan="2">Ноэль</td>
-
-            <td>Чжун Ли</td>
-            <td colspan="2">Юнь Цзинь</td>
-            <td>Нин Гуан</td>
-
-            <td>Итто</td>
-            <td>Горо</td>
-
-        </tr>
-        <tr class="chet">
-            <td class="gods-eye; main-str">Анемо</td>
-            <td>Венти</td>
-            <td colspan="2">Сахароза</td>
-            <td>Джинн</td>
-
-            <td colspan="4">Сяо</td>
-
-            <td>Кадзуха</td>
-            <td>Хэйдзо</td>
-        </tr>
-    </table>
-    </div>
-    
-    <div class="back; f">
-    <form action="/" method="POST">
-        <h2 id="forma">Анкета Genshin Impact</h2>
-        <label>
-            Имя:<br />
-            <input name="field-name-1"
-                   placeholder="ФИО" />
-        </label><br />
-        <label>
-            e-mail:<br />
-            <input name="field-email"
-                   type="email"
-                   placeholder="Введите вашу почту" />
-        </label><br />
-        <label>
-            Дата рождения:<br />
-            <input name="field-date"
-                   value="2022-09-27"
-                   type="date" />
-        </label><br />
-        Пол:<br />
-        <label>
-            <input type="radio" checked="checked"
-                   name="radio-group-1" value="Значение1" />
-            М
-        </label>
-        <label>
-            <input type="radio"
-                   name="radio-group-1" value="Значение2" />
-            Ж
-        </label><br />
-        <label>
-            <input type="radio"
-                   name="radio-group-1" value="Значение3" />
-            Не скажу
-        </label><br />
-        <label>
-            <input type="radio"
-                   name="radio-group-1" value="Значение4" />
-            Другой
-        </label><br />
-        <label>
-            <input type="radio"
-                   name="radio-group-1" value="Значение5" />
-            Деревянный
-        </label><br />
-
-        Какое оружие предпочитаете?<br />
-        <label>
-            <input type="radio" checked="checked"
-                   name="radio-group-2" value="Значение1" />
-            Копьё
-        </label>
-        <label>
-            <input type="radio"
-                   name="radio-group-2" value="Значение2" />
-            Одноручник
-        </label><br />
-        <label>
-            <input type="radio"
-                   name="radio-group-2" value="Значение3" />
-            Двуручник
-        </label><br />
-        <label>
-            <input type="radio"
-                   name="radio-group-2" value="Значение4" />
-            Древковое
-        </label><br />
-        <label>
-            <input type="radio"
-                   name="radio-group-2" value="Значение5" />
-            Лук
-        </label><br />
-        <label>
-            <input type="radio"
-                   name="radio-group-2" value="Значение6" />
-            Легендарное
-        </label><br />
-        <label>
-            В каком регионе хотели бы жить и почему?<br />
-            <textarea name="field-name-2">Введите что-нибудь...</textarea>
-        </label><br />
-        <label>
-            Какой глаз Бога хотели бы получить?
-            <br />
-            <select name="field-name-4[]"
-                    multiple="multiple">
-                <option value="Значение1">Пиро</option>
-                <option value="Значение2" selected="selected">Гидро</option>
-                <option value="Значение4" selected="selected">Электро</option>
-                <option value="Значение5" selected="selected">Анемо</option>
-                <option value="Значение6" selected="selected">Дендро</option>
-                <option value="Значение7" selected="selected">Крио</option>
-                <option value="Значение8" selected="selected">Гео</option>
-            </select>
-        </label><br />
-
-        Уверены в своём выборе?<br />
-        <label>
-            <input type="checkbox" checked="checked"
-                   name="check-1" />
-            Естественно
-        </label><br />
-        В скором времени (не)рассмотрим вашу заяку, (не)будем рады видеть вас в Тейвате!
-        <input type="submit" value="Отправить" />
-        <figure>
-        <p class="image"><img src="files/6.jpg" alt=""></p>
-        </figure>
-    </form>
-    </div>
-    </div>
-        
-    <figure>
-        <p class="image"><img src="files/5.jpg" alt="ну пожалуйста"></p>
-    </figure>
-    </div>
-    <footer>
-        <div>
-            (с) Рогожникова Мария 2022
+        <div class="data">
+            <img src="files/2.jpg" alt="">
         </div>
-    </footer>
+        <div class="data">
+            <img src="files/3.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/4.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/5.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/6.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/7.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/8.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/9.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/10.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/11.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/12.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/13.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/14.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/15.jpg" alt="">
+        </div>
+        <div class="data">
+            <img src="files/16.jpg" alt="">
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery-3.6.1.min.js" defer></script>
+    <script type="text/javascript" src="slick/slick.min.js" defer></script>
+    <script type="text/javascript" src="script.js" defer></script>
 </body>
 </html>
